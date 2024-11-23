@@ -1,0 +1,22 @@
+@import "./assets/styles/variable.scss";
+
+.App {
+  min-height: 100vh;
+  @include theme-transition;
+
+  .content-wrapper {
+    display: flex;
+    flex: 1;
+    position: relative;
+
+    .main-content {
+      flex: 1;
+      margin-left: 250px; // Adjust this value to match your sidebar width
+      padding: 20px;
+      min-height: calc(
+        100vh - 60px - 60px
+      ); // Subtract header and footer heights
+      overflow-x: hidden;
+    }
+  }
+}

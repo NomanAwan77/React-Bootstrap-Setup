@@ -1,0 +1,21 @@
+.page-not-found {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+
+  h1 {
+    font-size: 6rem;
+    color: #dc3545;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    color: #6c757d;
+  }
+}

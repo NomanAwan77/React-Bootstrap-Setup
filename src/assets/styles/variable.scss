@@ -1,0 +1,103 @@
+// Base Colors
+$white: #fff;
+$black: #000;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$purple: #6610f2;
+
+// Theme Variables
+:root {
+  // Light Theme (default)
+  --body-bg: #{$white};
+  --body-color: #{$gray-900};
+  --navbar-bg: #{$gray-100};
+  --footer-bg: #{$gray-100};
+  --border-color: #{$gray-300};
+  --card-bg: #{$white};
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --link-color: #{$purple};
+  --heading-color: #{$gray-900};
+}
+
+// Dark Theme
+[data-bs-theme="dark"] {
+  --body-bg: #{$gray-900};
+  --body-color: #{$gray-100};
+  --navbar-bg: #{$gray-800};
+  --footer-bg: #{$gray-800};
+  --border-color: #{$gray-700};
+  --card-bg: #{$gray-800};
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --link-color: lighten($purple, 20%);
+  --heading-color: #{$gray-100};
+}
+
+// Mixins for common styles
+@mixin theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+// Common styles using variables
+body {
+  background-color: var(--body-bg);
+  color: var(--body-color);
+  @include theme-transition;
+}
+
+.header {
+  background-color: var(--navbar-bg);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  @include theme-transition;
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  @include theme-transition;
+}
+
+// Theme switch styles
+.form-switch {
+  .form-check-input {
+    cursor: pointer;
+    &:checked {
+      background-color: var(--link-color);
+      border-color: var(--link-color);
+    }
+  }
+  .form-check-label {
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+// Bootstrap overrides
+.navbar {
+  .nav-link {
+    color: var(--body-color);
+    &:hover {
+      color: var(--link-color);
+    }
+  }
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+// Utility classes
+.text-theme {
+  color: var(--body-color) !important;
+}
+
+.bg-theme {
+  background-color: var(--body-bg) !important;
+}

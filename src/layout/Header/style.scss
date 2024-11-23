@@ -1,0 +1,11 @@
+@import "../../assets/styles/variable.scss";
+
+.header {
+  .navbar-toggler {
+    border-color: var(--border-color);
+  }
+
+  .navbar-brand {
+    color: var(--heading-color);
+  }
+}

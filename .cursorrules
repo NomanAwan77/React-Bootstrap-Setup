@@ -1,0 +1,121 @@
+You are an expert in ReactJS, React-Bootstrap, React Router, and Frontend Development.
+
+Code Style and Structure
+
+- Write concise, functional, and modular React code.
+- Use modern React patterns: functional components, hooks, and declarative syntax.
+- Organize files into directories for components, hooks, context, utils, and styles.
+- Favor named exports for components and utilities for consistency.
+- Structure files: primary component, subcomponents, helper functions, static content, and types.
+- Use descriptive variable names (e.g., isFetchingData, hasError, userDetails).
+
+File Naming Conventions
+
+- Use PascalCase for component files (e.g., `UserProfile.jsx`).
+- Use camelCase for utility and helper files (e.g., `fetchData.js`).
+- Use lowercase with dashes for directories (e.g., `components/user-profile`).
+
+React Router Integration
+
+- Use `react-router-dom` for client-side routing.
+- Define routes using a centralized configuration object for scalability.
+- Use `BrowserRouter` for standard SPAs and `HashRouter` for deployments requiring hash-based URLs.
+- Prefer `Outlet` and `Layout` components for nested routing.
+- Leverage dynamic routes and route parameters for reusable components.
+- Use `useParams` and `useSearchParams` for managing route params and query strings.
+
+React-Bootstrap Usage
+
+- Use React-Bootstrap for component styling and layout consistency.
+- Extend React-Bootstrap components with `className` for additional Tailwind or custom SCSS styling if required.
+- Use `Container`, `Row`, and `Col` for responsive layouts.
+- Prefer React-Bootstrap forms and modals for consistent UI elements.
+- Leverage utilities like `Accordion`, `Carousel`, and `Navbar` for standard features.
+
+Jsx (if applicable)
+
+- Use Jsx extention.
+
+UI and Styling
+
+- Use React-Bootstrap's `ThemeProvider` for global theming.
+- Follow responsive design principles using Bootstrap's grid system.
+- Use Tailwind CSS or SCSS for custom styles beyond Bootstrap's capabilities.
+- Ensure accessibility (a11y) standards: aria-labels, focus management, and keyboard navigation.
+- Support dark mode using a theme toggle with React Context or CSS variables.
+
+State Management
+
+- Use `useState` and `useReducer` for local state.
+- Use `useContext` for managing global state (e.g., user session, theme).
+- For more complex state management, consider Zustand or Redux Toolkit.
+- Cache API responses and manage query state using libraries like React Query or SWR.
+
+API Integration and Data Fetching
+
+- Use `fetch` or `axios` for API calls with async/await syntax.
+- Handle data fetching in components using `useEffect` and React Query.
+- Centralize API calls in a `services` or `api` directory.
+
+Error Handling
+
+- Implement error boundaries using React's `ErrorBoundary`.
+- Handle errors with `try-catch` blocks in async code.
+- Show user-friendly error messages using Bootstrap's `Alert` component.
+- Log errors to a service like Sentry for production monitoring.
+
+Routing Best Practices
+
+- Use `Link` or `NavLink` for navigation, styled as Bootstrap buttons or links.
+- Handle authentication using protected routes and custom wrappers for `Route` components.
+- Implement lazy loading for routes with `React.Suspense` and `React.lazy`.
+
+Performance Optimization
+
+- Minimize re-renders using `React.memo`, `useCallback`, and `useMemo`.
+- Optimize routing by splitting large modules into lazy-loaded chunks.
+- Use Bootstrap utilities and components for performance over custom solutions where possible.
+- Profile and optimize the app using React DevTools and Lighthouse.
+
+Testing
+
+- Write unit tests for components using Jest and React Testing Library.
+- Test routing flows and navigation using React Router Testing Library.
+- Use mock services for API testing.
+- Consider end-to-end testing for critical flows using Cypress.
+
+Security
+
+- Escape user inputs to prevent XSS attacks.
+- Use HTTPS for API communication.
+- Secure sensitive data using environment variables via `.env` files.
+- Use Helmet.js for setting HTTP headers for security.
+
+Internationalization (i18n)
+
+- Use `react-i18next` for managing translations.
+- Support multiple languages and RTL layouts.
+- Ensure text scaling and font adjustments for accessibility.
+
+Deployment and Maintenance
+
+- Follow Create React App or Vite for project bootstrapping.
+- Use CI/CD pipelines for builds and deployments.
+- Use Netlify, Vercel, or Firebase for deploying React applications.
+- Monitor app performance and errors using tools like Sentry or Google Analytics.
+
+Key Conventions
+
+1. Prioritize responsive and accessible UI design.
+2. Centralize routing and global states for easy maintenance.
+3. Leverage React-Bootstrap for quick and consistent UI development.
+4. Test extensively across browsers and devices to ensure compatibility.
+5. Follow React Router and Bootstrap's official documentation for best practices.
+6. Use `env` files for managing environment-specific configurations.
+
+API Documentation
+
+- Refer to official documentation for ReactJS, React Router, and React-Bootstrap:
+  - React: https://reactjs.org/docs/
+  - React Router: https://reactrouter.com/
+  - React-Bootstrap: https://react-bootstrap.github.io/
